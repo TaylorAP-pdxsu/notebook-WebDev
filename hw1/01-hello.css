@@ -1,9 +1,11 @@
 .img {
   display: block;
   margin: 0 auto;
+  border-radius: 100px;
 }
 
 .bio {
   margin: 20px auto;
   width: 300px;
+  text-align: center;
 }
