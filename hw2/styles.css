@@ -54,6 +54,22 @@ nav ul li a {
 }
 
 /* Code for exercise 02-cards */
+.deck {
+  text-align: center;
+}
+div[class^="card"] {
+  display: inline-block;
+  width: 350px;
+  height: 550px;
+  border-style: solid;
+  border-color: var(--gray);
+}
+button {
+  padding: 10px 25px;
+}
+button:hover {
+  background-color: var(--violetred);
+}
 
 /* Code for exercise 03-table */
 
