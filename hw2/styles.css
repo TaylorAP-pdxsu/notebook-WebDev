@@ -28,7 +28,7 @@ form {
 }
 
 /* Code for exercise 01-navbar */
-nav {
+.navbar {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -36,25 +36,27 @@ nav {
   background-color: var(--black);
 }
 
-nav ul {
+.navbar_List {
   list-style-type: none;
-  text-align: center;
+  text-align: right;
   margin: 0;
   padding: 0;
 }
 
-nav ul li {
+.ListingLink {
   display: inline-block;
-  padding: 0.5em 1em;
+  /*padding: 0.5em 1em;*/
 }
 
-nav ul li:hover {
-  background-color: var(--violetred);
-}
-
-nav ul li a {
+.ListingLink_link {
   text-decoration: none;
   color: var(--white);
+  padding: 20px;
+  display: block;
+}
+
+.ListingLink_link:hover {
+  background-color: var(--violetred);
 }
 
 /* Code for exercise 02-cards */
@@ -62,31 +64,31 @@ nav ul li a {
   text-align: center;
 }
 
-div[class^="card"] {
+.card {
   display: inline-block;
   width: 350px;
-  height: 550px;
   border-style: solid;
   border-color: var(--gray);
+  padding: 20px;
 }
 
-button {
+.card_button {
   padding: 10px 50px;
   background-color: var(--black);
   color: var(--white);
 }
 
-button:hover {
+.card_button:hover {
   background-color: var(--violetred);
 }
 
 /* Code for exercise 03-table */
-table {
+.TvListing {
   margin-left: auto;
   margin-right: auto;
 }
 
-th {
+.TvListing_head {
   background-color: var(--black);
   color: var(--white);
   width: 200px;
@@ -94,15 +96,19 @@ th {
   font-weight: bold;
 }
 
-tr {
+.TvListing_Row {
   height: 40px;
 }
 
-tr:hover {
+.TvListing_Row:hover {
   background-color: var(--orange);
 }
 
-td[class="channel"] {
+td {
+  border: 1px solid var(--black);
+}
+
+.channel {
   text-align: center;
   background-color: var(--violetred);
   color: var(--white);
@@ -114,12 +120,12 @@ td:not([class]) {
 }
 
 /* Code for exercise 04-form */
-form {
+.SignUpForm {
   border: solid;
   border-color: var(--gray);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 40px;
+  padding: 20px;
 }
 
 .form-header {
@@ -130,44 +136,51 @@ form {
   font-size: small;
 }
 
-form div {
+.SignUpForm_question {
   padding: 5px;
 }
 
-div label {
+.SignUpForm_label {
   display: inline-block;
   width: 130px;
   font-weight: bold;
 }
 
-fieldset {
+.PronsFieldset {
   border: none;
+  padding: 0;
 }
 
-fieldset legend {
+.PronsFieldset_legend {
   font-weight: bold;
 }
 
-fieldset label {
+.PronsFieldset_label {
   display: block;
 }
 
-input[type="submit"] {
+.SignUpForm_input {
+  width: 150px;
+  float: right;
+}
+
+.SignUpForm_submit {
   background-color: var(--black);
   color: var(--white);
   width: 150px;
-  height: 40px;
+  height: 30px;
 }
 
-input[type="reset"] {
+.SignUpForm_reset {
   display: inline-block;
   width: 150px;
-  height: 40px;
+  height: 30px;
 }
 
-input[type="submit"]:hover {
+.SignUpForm_submit:hover {
   background-color: var(--violetred);
 }
-input[type="reset"]:hover {
+
+.SignUpForm_reset:hover {
   background-color: lightgray;
 }

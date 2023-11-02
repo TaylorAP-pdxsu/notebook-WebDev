@@ -11,51 +11,96 @@
     <main>
       <h1>Exercise 04 - Form</h1>
       <!-- Add your code here -->
-      <form>
+      <form class="SignUpForm">
         <h2 class="form-header">Sign Up Form</h2>
         <p class="form-p">Fill up the items in the form below.</p>
-        <div>
-          <label for="fl-name">Name:</label>
-          <input type="text" name="Name:" id="fl-name" />
+        <div class="SignUpForm_question">
+          <label class="SignUpForm_label" for="fl-name">Name:</label>
+          <input
+            class="SignUpForm_input"
+            type="text"
+            name="Name:"
+            id="fl-name"
+          />
         </div>
-        <div>
-          <label for="username">Username:</label>
-          <input type="text" name="Username" id="username" />
+        <div class="SignUpForm_question">
+          <label class="SignUpForm_label" for="username">Username:</label>
+          <input
+            class="SignUpForm_input"
+            type="text"
+            name="Username"
+            id="username"
+          />
         </div>
-        <div>
-          <label for="user-email">Email:</label>
-          <input type="email" name="Email" id="user-email" />
+        <div class="SignUpForm_question">
+          <label class="SignUpForm_label" for="user-email">Email:</label>
+          <input
+            class="SignUpForm_input"
+            type="email"
+            name="Email"
+            id="user-email"
+          />
         </div>
-        <div>
-          <label for="user-password">Password:</label>
-          <input type="password" name="Password" id="user-password" />
+        <div class="SignUpForm_question">
+          <label class="SignUpForm_label" for="user-password">Password:</label>
+          <input
+            class="SignUpForm_input"
+            type="password"
+            name="Password"
+            id="user-password"
+          />
         </div>
-        <div>
-          <label for="user-dob">Date Of birth:</label>
-          <input type="date" name="DOB" id="user-dob" />
+        <div class="SignUpForm_question">
+          <label class="SignUpForm_label" for="user-dob">Date Of birth:</label>
+          <input
+            class="SignUpForm_input"
+            type="date"
+            name="DOB"
+            id="user-dob"
+          />
         </div>
-        <fieldset>
-          <legend>Preferred Pronouns</legend>
-          <label for="She/her">
-            <input type="radio" name="pref-pronouns" id="She/her" />
+        <fieldset class="PronsFieldset">
+          <legend class="PronsFieldset_legend">Preferred Pronouns</legend>
+          <label class="PronsFieldset_label" for="She/her">
+            <input
+              class="SignUpForm_input"
+              type="radio"
+              name="pref-pronouns"
+              id="She/her"
+            />
             She/her
           </label>
-          <label for="He/him">
-            <input type="radio" name="pref-pronouns" id="He/him" />
+          <label class="PronsFieldset_label" for="He/him">
+            <input
+              class="SignUpForm_input"
+              type="radio"
+              name="pref-pronouns"
+              id="He/him"
+            />
             He/him
           </label>
-          <label for="They/them">
-            <input type="radio" name="pref-pronouns" id="They/them" />
+          <label class="PronsFieldset_label" for="They/them">
+            <input
+              class="SignUpForm_input"
+              type="radio"
+              name="pref-pronouns"
+              id="They/them"
+            />
             They/them
           </label>
-          <label for="not-say">
-            <input type="radio" name="pref-pronouns" id="not-say" />
+          <label class="PronsFieldset_label" for="not-say">
+            <input
+              class="SignUpForm_input"
+              type="radio"
+              name="pref-pronouns"
+              id="not-say"
+            />
             I prefer not to say
           </label>
         </fieldset>
-        <div>
-          <input type="submit" value="Submit" />
-          <input type="reset" value="Reset" />
+        <div class="SignUpForm_question">
+          <input class="SignUpForm_submit" type="submit" value="Submit" />
+          <input class="SignUpForm_reset" type="reset" value="Reset" />
         </div>
       </form>
     </main>
