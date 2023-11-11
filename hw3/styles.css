@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.2em;
   color: var(--black);
 }
@@ -34,7 +34,17 @@ form {
 }
 
 /* Code for exercise 01-hello */
+img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 200px;
+}
 
+.bio {
+  margin: 20px auto;
+  width: 300px;
+  text-align: center;
+}
 /* Code for exercise 02-form */
 
 /* Code for exercise 03-starships */
