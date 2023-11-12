@@ -9,11 +9,13 @@ async function handleFormSubmit(event) {
 
   const currForm = event.currentTarget;
 
+  //get the checked radio button
   let radioPronouns = currForm.querySelector(
     "input[name=pref-pronouns]:checked"
   );
 
   console.log(currForm);
+  //if the form is completely filled out then output to console, else output an error
   if (
     currForm.elements.Name.value &&
     currForm.elements.Username.value &&
@@ -24,11 +26,36 @@ async function handleFormSubmit(event) {
     console.log("Name: " + currForm.elements.Name.value);
     console.log("Username: " + currForm.elements.Username.value);
     console.log("Email: " + currForm.elements.Email.value);
-    console.log("Date of Birth: " + currForm.elements.DOB.value);
+    let dateOfBirth = new Date(currForm.elements.DOB.value);
+    let months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    //DOB day not outputting correctly
+    console.log(
+      "Date of Birth: " +
+        months[dateOfBirth.getMonth()] +
+        " " +
+        dateOfBirth.getDay() +
+        ", " +
+        dateOfBirth.getFullYear()
+    );
   } else {
     console.error("Form must be completely filled out!");
   }
 
+  //determine pronouns output based on radio selected
+  //determines based on radio's id
   switch (radioPronouns.id) {
     case "She/her":
       console.log("Preferred Pronouns: She/her");
