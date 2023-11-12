@@ -1,7 +1,5 @@
 // Add your code here
 
-const url = "02-form.html";
-
 const userForm = document.getElementById("SignUpForm");
 
 userForm.addEventListener("submit", handleFormSubmit);
@@ -11,15 +9,26 @@ async function handleFormSubmit(event) {
 
   const currForm = event.currentTarget;
 
-  console.log(currForm);
-  console.log("Name: " + currForm.elements.Name.value);
-  console.log("Username: " + currForm.elements.Username.value);
-  console.log("Email: " + currForm.elements.Email.value);
-  console.log("Date of Birth: " + currForm.elements.DOB.value);
-
   let radioPronouns = currForm.querySelector(
     "input[name=pref-pronouns]:checked"
   );
+
+  console.log(currForm);
+  if (
+    currForm.elements.Name.value &&
+    currForm.elements.Username.value &&
+    currForm.elements.Email.value &&
+    currForm.elements.DOB.value &&
+    radioPronouns
+  ) {
+    console.log("Name: " + currForm.elements.Name.value);
+    console.log("Username: " + currForm.elements.Username.value);
+    console.log("Email: " + currForm.elements.Email.value);
+    console.log("Date of Birth: " + currForm.elements.DOB.value);
+  } else {
+    console.error("Form must be completely filled out!");
+  }
+
   switch (radioPronouns.id) {
     case "She/her":
       console.log("Preferred Pronouns: She/her");
