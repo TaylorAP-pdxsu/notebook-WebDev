@@ -63,20 +63,23 @@ img {
 }
 
 section {
-  display: grid;
   width: 50%;
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  padding: 30px;
 }
 
 .ship-name {
   grid-column-start: 1;
   grid-row-start: 1;
+  font-weight: bold;
 }
 
 .ship-price {
   grid-column-start: 2;
   grid-row-start: 1;
+  font-weight: bold;
 }
 
 .ship-manufacturer {
@@ -86,8 +89,29 @@ section {
 }
 
 .ship-atmo-speed {
-  grid-column: 1;
+  grid-column-start: 1;
+  grid-column-end: 2;
   grid-row-start: 4;
-  grid-row-end: 6;
+  text-align: center;
+  font-weight: bold;
+}
+
+.atmo-speed-text {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 5;
+  text-align: center;
+}
+
+.ship-cargo-cap {
+  grid-column-start: 2;
+  grid-row-start: 4;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cargo-cap-text {
+  grid-column-start: 2;
+  grid-row-start: 5;
   text-align: center;
 }

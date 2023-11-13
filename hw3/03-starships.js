@@ -33,14 +33,24 @@ const createSpaceshipComponent = (starship) => {
   let shipAtmoSpeed = document.createElement("div");
   shipAtmoSpeed.className = "ship-atmo-speed";
   container.append(shipAtmoSpeed);
-  //let shipCargoCap = document.createElement("div");
+  let atmoSpeedText = document.createElement("div");
+  atmoSpeedText.className = "atmo-speed-text";
+  container.append(atmoSpeedText);
+
+  let shipCargoCap = document.createElement("div");
+  shipCargoCap.className = "ship-cargo-cap";
+  container.append(shipCargoCap);
+  let cargoCapText = document.createElement("div");
+  cargoCapText.className = "cargo-cap-text";
+  container.append(cargoCapText);
 
   shipName.textContent = starship.name;
-  shipPrice.textContent = starship.cost_in_credits;
+  shipPrice.textContent = starship.cost_in_credits + " credits";
   shipManufacturer.textContent = starship.manufacturer;
-  shipAtmoSpeed.textContent =
-    starship.max_atmosphering_speed + " Max atmosphering speed";
-  // shipCargoCap.textContent = starship.cargo_capacity;
+  shipAtmoSpeed.textContent = starship.max_atmosphering_speed;
+  atmoSpeedText.textContent = "Max atmosphering speed";
+  shipCargoCap.textContent = starship.cargo_capacity;
+  cargoCapText.textContent = "Cargo Capacity";
 
   return container; // do not modify this line
 };
