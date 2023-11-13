@@ -60,6 +60,12 @@ img {
 .btn {
   width: 80px;
   padding: 10px;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.btn:focus {
+  background-color: var(--violetred);
 }
 
 section {
@@ -67,7 +73,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  padding: 30px;
+  padding: 40px;
 }
 
 .ship-name {
@@ -80,6 +86,7 @@ section {
   grid-column-start: 2;
   grid-row-start: 1;
   font-weight: bold;
+  text-align: right;
 }
 
 .ship-manufacturer {
