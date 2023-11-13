@@ -4,14 +4,11 @@ let starships = [{ name: "" }];
 const fetchData = (url) => {
   // REtrieve the data from the API
   fetch(url)
-    .then((response) => response)
+    .then((response) => response.json())
     .then((data) => {
       console.log(data);
 
       starships = data.results;
-      for (let i = 0; i < starships.length; i++) {
-        starships[i].name = data.results[i].name;
-      }
     })
     .catch((error) => console.error(error));
 };
@@ -22,16 +19,28 @@ const createSpaceshipComponent = (starship) => {
   const container = document.createElement("section"); // do not modify this line
 
   let shipName = document.createElement("div");
-  let shipManufacturer = document.createElement("div");
+  shipName.className = "ship-name";
+  container.append(shipName);
+
   let shipPrice = document.createElement("div");
+  shipPrice.className = "ship-price";
+  container.append(shipPrice);
+
+  let shipManufacturer = document.createElement("div");
+  shipManufacturer.className = "ship-manufacturer";
+  container.append(shipManufacturer);
+
   let shipAtmoSpeed = document.createElement("div");
-  let shipCargoCap = document.createElement("div");
+  shipAtmoSpeed.className = "ship-atmo-speed";
+  container.append(shipAtmoSpeed);
+  //let shipCargoCap = document.createElement("div");
 
   shipName.textContent = starship.name;
-  shipManufacturer.textContent = starship.manufacturer;
   shipPrice.textContent = starship.cost_in_credits;
-  shipAtmoSpeed.textContent = starship.max_atmosphering_speed;
-  shipCargoCap.textContent = starship.cargo_capacity;
+  shipManufacturer.textContent = starship.manufacturer;
+  shipAtmoSpeed.textContent =
+    starship.max_atmosphering_speed + " Max atmosphering speed";
+  // shipCargoCap.textContent = starship.cargo_capacity;
 
   return container; // do not modify this line
 };
@@ -79,11 +88,6 @@ const clearAndReset = () => {
 };
 
 const displayShipComponents = (starships) => {
-  console.log("Inside output function...");
-  for (const i in starships) {
-    console.log(i.name);
-  }
-  //
   clearAndReset();
   let app = document.getElementById("results");
   for (const ship in starships) {

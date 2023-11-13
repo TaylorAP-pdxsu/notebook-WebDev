@@ -61,3 +61,33 @@ img {
   width: 80px;
   padding: 10px;
 }
+
+section {
+  display: grid;
+  width: 50%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.ship-name {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.ship-price {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+
+.ship-manufacturer {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+}
+
+.ship-atmo-speed {
+  grid-column: 1;
+  grid-row-start: 4;
+  grid-row-end: 6;
+  text-align: center;
+}
